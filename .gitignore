@@ -7,3 +7,4 @@
 *.swp
 *.tmp
 .tags
+compile_commands.json

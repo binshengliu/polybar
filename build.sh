@@ -193,6 +193,7 @@ main() {
     -DENABLE_NETWORK:BOOL="${ENABLE_NETWORK}" \
     -DENABLE_CURL:BOOL="${ENABLE_CURL}"       \
     -DBUILD_IPC_MSG:BOOL="${ENABLE_IPC_MSG}"   \
+    -DCMAKE_EXPORT_COMPILE_COMMANDS=1         \
     .. || msg_err "Failed to generate build... read output to get a hint of what went wrong"
 
   msg "Building project"
