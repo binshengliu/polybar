@@ -216,9 +216,9 @@ namespace net {
       // signalstrength in dBm
       int signalstrength = static_cast<int>(nla_get_u32(bss[NL80211_BSS_SIGNAL_MBM])) / 100;
 
-      // WiFi-hardware usually operates in the range -90 to -20dBm.
-      const int hardware_max = -20;
-      const int hardware_min = -90;
+      // issue#1834: WiFi-hardware usually operates in the range -110 to -40dBm.
+      const int hardware_max = -40;
+      const int hardware_min = -110;
       signalstrength = std::max(hardware_min, std::min(signalstrength, hardware_max));
 
       // Shift for positive values
